@@ -3,276 +3,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 Internal X Cheat</title>
+<title>🔥 Internal X Cheat PRO</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #000, #0a0a0a);
-  color: #fff;
+/* RESET & BODY */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI',sans-serif;
+  color:#fff;
+  overflow-y:auto;
+  position:relative;
+  background:#000;
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(red, darkred);
-  border-radius: 10px;
-  box-shadow: 0 0 10px red;
+/* PARTICLES CANVAS */
+#particles-js {
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  z-index:-1;
+}
+
+/* SCROLLBAR (red style) */
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(red,darkred);
+  border-radius:10px;
+  box-shadow:0 0 10px red;
+}
+::-webkit-scrollbar-track{
+  background: #000;
 }
 
 /* HEADER */
-header {
-  padding: 20px 30px;
+header{
+  padding:20px 30px;
+  text-align:center;
+  z-index:2;
+  position:relative;
+}
+.brand{
+  font-size:32px;
+  color:red;
+  text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red;
+  animation: flicker 1.5s infinite alternate;
+}
+.title{
+  font-size:16px;
+  color:white; /* changed from #aaa to white */
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px #aaa, 0 0 30px white; /* white glow */
+  animation: flicker 1.5s infinite alternate;
 }
 
-.brand {
-  font-size: 28px;
-  color: red;
-  text-shadow: 0 0 20px red;
-}
-
-.title {
-  font-size: 14px;
-  color: #aaa;
+/* FLICKER KEYFRAMES */
+@keyframes flicker {
+  0%   { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  10%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.8; }
+  20%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  30%  { text-shadow: 0 0 3px red, 0 0 6px red, 0 0 12px darkred, 0 0 18px red; opacity:0.9; }
+  40%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  50%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.7; }
+  60%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  70%  { text-shadow: 0 0 3px red, 0 0 6px red, 0 0 12px darkred, 0 0 18px red; opacity:0.85; }
+  80%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  90%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.8; }
+  100% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
 }
 
 /* HERO */
-.hero {
-  height: 350px;
-  background: linear-gradient(45deg, #000, #1a0000, #000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
+.hero{
+  height:350px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+  text-align:center;
+  z-index:2;
+  position:relative;
 }
-
-.hero h1 { font-size: 40px; }
-
-.hero-btns {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
+.hero h1{ font-size:42px;margin-bottom:20px;}
+.hero-btns{display:flex;gap:15px;flex-wrap:wrap;}
+.btn{
+  position:relative;
+  background:linear-gradient(45deg, red, darkred);
+  padding:12px 25px;
+  border-radius:30px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,0,0,0.5);
+  overflow:hidden;
+  transition:0.3s;
+  z-index:2;
 }
-
-.btn {
-  background: linear-gradient(45deg, red, darkred);
-  padding: 12px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 0 20px red;
+.btn::after{
+  content:'';
+  position:absolute;
+  width:0;height:100%;
+  top:0;left:0;
+  background:rgba(255,255,255,0.1);
+  transition:0.4s;
 }
+.btn:hover::after{width:100%;}
+.btn:hover{transform:scale(1.05);}
 
-/* GRID */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
-  padding: 20px;
+/* VIDEO GRID */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:15px;
+  padding:20px;
+  position:relative;
+  z-index:2;
 }
-
-/* VIDEO CARD */
-.video-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
+.video-item{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  backdrop-filter: blur(8px);
+  border:1px solid rgba(255,0,0,0.2);
+  box-shadow:0 0 15px rgba(255,0,0,0.3);
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s;
 }
-
-.video-item img {
-  width: 100%;
-  transition: 0.4s;
+.video-item.show{opacity:1; transform:translateY(0);}
+.video-item img{width:100%; display:block; transition:0.4s;}
+.video-item:hover img{transform:scale(1.08) translateY(-5px);}
+.video-item::after{
+  content:"▶";
+  position:absolute;font-size:45px;color:red;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  transition:0.3s;
 }
-
-.video-item::after {
-  content: "▶";
-  position: absolute;
-  font-size: 45px;
-  color: red;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 0.3s;
+.video-item:hover::after{transform:translate(-50%,-50%) scale(1);}
+.video-item video{
+  position:absolute;width:100%;height:100%;object-fit:cover;
+  top:0;left:0;opacity:0;transition:0.3s;
 }
-
-.video-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-}
-
-.video-item:hover img { transform: scale(1.1); }
-.video-item:hover::before { opacity: 1; }
-.video-item:hover::after { transform: translate(-50%, -50%) scale(1); }
+.video-item:hover video{opacity:1;}
 
 /* RESOURCES PAGE */
-.resources-page {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  display: none;
-  flex-direction: column;
-  z-index: 999;
+.resources-page{
+  position:fixed;inset:0;
+  background:#000;
+  display:none;
+  flex-direction:column;
+  z-index:999;
+  opacity:0;
+  transition:0.4s;
+  overflow-y:auto;
 }
-
-/* TOP BAR */
-.res-header {
-  padding: 15px;
-  background: #111;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.resources-page.active{opacity:1;}
+.res-header{
+  padding:15px;
+  background:#111;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-
-.cancel-btn {
-  background: red;
-  padding: 8px 15px;
-  border-radius: 20px;
-  cursor: pointer;
+.cancel-btn{
+  background:red;padding:8px 15px;border-radius:20px;cursor:pointer;
 }
-
-/* LIST */
-.res-list {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  overflow-y: auto;
+.res-list{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
-
-/* ROW */
-.res-row {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: #111;
-  padding: 10px;
-  border-radius: 10px;
+.res-row{
+  display:flex;align-items:center;gap:15px;background:#111;padding:10px;border-radius:10px;
+  flex-wrap:wrap;
 }
-
-/* LEFT VIDEO */
-.res-row img {
-  width: 180px;
-  border-radius: 8px;
-}
-
-/* RIGHT BUTTON */
-.res-btn {
-  margin-left: auto;
-  background: red;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-}
+.res-row img{width:180px;border-radius:8px;}
+.res-btn{margin-left:auto;background:red;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;}
+.res-btn:hover{opacity:0.8;}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .video-grid { grid-template-columns: repeat(2,1fr); }
-  .res-row { flex-direction: column; align-items: flex-start; }
-  .res-btn { margin-left: 0; width: 100%; }
+  .video-grid{grid-template-columns:repeat(2,1fr);}
+  .res-row{flex-direction:column;align-items:flex-start;}
+  .res-btn{margin-left:0;width:100%;}
 }
 </style>
 </head>
-
 <body>
+
+<!-- PARTICLES BACKGROUND -->
+<div id="particles-js"></div>
 
 <header>
   <span class="brand">INTERNAL X CHEAT</span><br>
-  <span class="title">PANEL SERIES PRO MAX</span>
+  <span class="title">PANEL SERIES PRO MAX</span><br>
 </header>
 
 <div class="hero">
   <h1>🔥 PANEL MAKING SERIES</h1>
-
   <div class="hero-btns">
-    <div class="btn" onclick="openChannel()">▶ Visit Channel</div>
-    <div class="btn" onclick="openDiscord()">💬 Join Discord</div>
-    <div class="btn" onclick="openResources()">📁 Video Resources</div>
+    <div class="btn" onclick="playClick();openChannel()">▶ Visit Channel</div>
+    <div class="btn" onclick="playClick();openDiscord()">💬 Join Discord</div>
+    <div class="btn" onclick="playClick();openResources()">📁 Video Resources</div>
   </div>
 </div>
 
-<!-- MAIN VIDEOS -->
 <div class="video-grid" id="grid"></div>
 
-<!-- RESOURCES PAGE -->
 <div class="resources-page" id="resPage">
-  
   <div class="res-header">
     <h3>📁 Video Resources</h3>
-    <div class="cancel-btn" onclick="closeResources()">✖ Close</div>
+    <div class="cancel-btn" onclick="playClick();closeResources()">✖ Close</div>
   </div>
-
   <div class="res-list" id="resList"></div>
-
 </div>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-const resources = [
-  { id: "QqN8hd7jrS0", url: "https://just2earn.com/PROJECT" },
-  { id: "RA1jhnu4fks", url: "https://www.mediafire.com/file/exqwmekcyl9kzuz/Module+PART+2.rar/file" },
-  { id: "sJwiOQO9ueg", url: "https://just2earn.com/PART3" },
-  { id: "oSay9eFOauw", url: "https://www.mediafire.com/file/2gox181lr3t3x26/Module.rar/file" },
-  { id: "EsBd5OT7dlQ", url: "https://just2earn.com/UI-HIDER-METHOD" },
-  { id: "ksTVDIxc-AE", url: "https://just2earn.com/AIMBOT-BODY-METHOD" },
-  { id: "evbuY3QC83A", url: "https://just2earn.com/BYPASSPROJECT" },
-  { id: "cvVBdVPQFFc", url: "https://just2earn.com/AIMBOT-HEAD" },
-  { id: "M48tRpOxYVM", url: "https://just2earn.com/particleseffect" },
-  { id: "9RZJCP2wMiw", url: "https://www.mediafire.com/file/wsn4yizskasocpc/sound+method.rar/file" },
-  { id: "G0lw3zslQGU", url: "https://www.mediafire.com/file/fvb3ry4u06l6zx7/KEYBINGING.rar/file" },
-  { id: "1rroRv8v-UE", url: "https://www.mediafire.com/file/1hls5gths8bnpi4/Notification.rar/file" },
-  { id: "kV9qY3aEXpo", url: "https://www.mediafire.com/file/8yr1ibp1dh1war3/Colour+Changer.rar/file" },
-  { id: "Ua-4JbQXE8M", url: "https://discord.gg/UqKDqsBpBp" },
-  { id: "oJBZjhR5MdQ", url: "https://just2earn.com/CAMERA-LEFT" },
-  { id: "kEIhdx2F7Ls", url: "https://just2earn.com/LOGINPAGE" },
-  { id: "-FSJSTopTgQ", url: "https://just2earn.com/SECTION" },
-  { id: "IP7_UQ3GezQ", url: "https://just2earn.com/DLL-INJECTOR-TOOL" },
-  { id: "LRDEAAJcPM4", url: "https://just2earn.com/AIMBOT-NECK" },
-  { id: "b_9Y9ZWctbc", url: "https://discord.gg/UqKDqsBpBp" },
-  { id: "9RJrUr_LBFU", url: "https://just2earn.com/AIMBOT-AI" },
-  { id: "05P35reiUCM", url: "https://just2earn.com/AIMBOT-ON-OFF" }
+// PARTICLES CONFIG
+particlesJS('particles-js', {
+  particles:{
+    number:{value:80,density:{enable:true,value_area:800}},
+    color:{value:'#ff0000'},
+    shape:{type:'circle'},
+    opacity:{value:0.5,random:true},
+    size:{value:3,random:true},
+    line_linked:{enable:true,distance:150,color:'#ff0000',opacity:0.4,width:1},
+    move:{enable:true,speed:2,direction:'none',random:false,straight:false,out_mode:'out',bounce:false}
+  },
+  interactivity:{
+    detect_on:'canvas',
+    events:{onhover:{enable:true,mode:'repulse'},onclick:{enable:true,mode:'push'},resize:true},
+    modes:{repulse:{distance:100},push:{particles_nb:4}}
+  },
+  retina_detect:true
+});
+
+// RESOURCES DATA (21 VIDEOS)
+const resources=[
+{id:"QqN8hd7jrS0",url:"https://just2earn.com/PROJECT"},
+{id:"RA1jhnu4fks",url:"https://www.mediafire.com/file/exqwmekcyl9kzuz/Module+PART+2.rar/file"},
+{id:"sJwiOQO9ueg",url:"https://just2earn.com/PART3"},
+{id:"oSay9eFOauw",url:"https://www.mediafire.com/file/2gox181lr3t3x26/Module.rar/file"},
+{id:"EsBd5OT7dlQ",url:"https://just2earn.com/UI-HIDER-METHOD"},
+{id:"ksTVDIxc-AE",url:"https://just2earn.com/AIMBOT-BODY-METHOD"},
+{id:"evbuY3QC83A",url:"https://just2earn.com/BYPASSPROJECT"},
+{id:"cvVBdVPQFFc",url:"https://just2earn.com/AIMBOT-HEAD"},
+{id:"M48tRpOxYVM",url:"https://just2earn.com/particleseffect"},
+{id:"9RZJCP2wMiw",url:"https://www.mediafire.com/file/wsn4yizskasocpc/sound+method.rar/file"},
+{id:"G0lw3zslQGU",url:"https://www.mediafire.com/file/fvb3ry4u06l6zx7/KEYBINGING.rar/file"},
+{id:"1rroRv8v-UE",url:"https://www.mediafire.com/file/1hls5gths8bnpi4/Notification.rar/file"},
+{id:"kV9qY3aEXpo",url:"https://www.mediafire.com/file/8yr1ibp1dh1war3/Colour+Changer.rar/file"},
+{id:"Ua-4JbQXE8M",url:"https://discord.gg/UqKDqsBpBp"},
+{id:"oJBZjhR5MdQ",url:"https://just2earn.com/CAMERA-LEFT"},
+{id:"kEIhdx2F7Ls",url:"https://just2earn.com/LOGINPAGE"},
+{id:"-FSJSTopTgQ",url:"https://just2earn.com/SECTION"},
+{id:"IP7_UQ3GezQ",url:"https://just2earn.com/DLL-INJECTOR-TOOL"},
+{id:"LRDEAAJcPM4",url:"https://just2earn.com/AIMBOT-NECK"},
+{id:"b_9Y9ZWctbc",url:"https://discord.gg/UqKDqsBpBp"},
+{id:"9RJrUr_LBFU",url:"https://just2earn.com/AIMBOT-AI"},
+{id:"05P35reiUCM",url:"https://just2earn.com/AIMBOT-ON-OFF"}
 ];
 
 // GRID LOAD
+const grid=document.getElementById("grid");
 resources.forEach(item=>{
-  document.getElementById("grid").innerHTML += `
-    <div class="video-item" onclick="openYT('${item.id}')">
-      <img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg">
-    </div>
-  `;
+  const div=document.createElement("div");
+  div.className="video-item";
+  div.innerHTML=`<img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg"><video src="" muted loop></video>`;
+  div.onclick=()=>openYT(item.id);
+  grid.appendChild(div);
+});
+
+// SCROLL REVEAL
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".video-item").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-50){el.classList.add("show");}
+  });
 });
 
 // RESOURCES LIST
+const resList=document.getElementById("resList");
 resources.forEach(item=>{
-  document.getElementById("resList").innerHTML += `
-    <div class="res-row">
-      <img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg">
-      <button class="res-btn" onclick="window.open('${item.url}', '_blank')">▶ Resources</button>
-    </div>
-  `;
+  const row=document.createElement("div");
+  row.className="res-row";
+  row.innerHTML=`<img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg"><button class="res-btn" onclick="window.open('${item.url}','_blank')">▶ Resources</button>`;
+  resList.appendChild(row);
 });
 
-function openYT(id){
-  window.open("https://youtu.be/" + id, "_blank");
-}
-
-function openChannel(){
-  window.open("https://www.youtube.com/@internalxcheat", "_blank");
-}
-
-function openDiscord(){
-  window.open("https://discord.gg/UqKDqsBpBp", "_blank");
-}
-
+// FUNCTIONS
+function openYT(id){window.open("https://youtu.be/"+id,"_blank");}
+function openChannel(){window.open("https://www.youtube.com/@internalxcheat","_blank");}
+function openDiscord(){window.open("https://discord.gg/UqKDqsBpBp","_blank");}
 function openResources(){
-  document.getElementById("resPage").style.display = "flex";
+  document.body.style.overflow='hidden';
+  const p=document.getElementById("resPage");
+  p.style.display="flex";
+  setTimeout(()=>p.classList.add("active"),10);
+}
+function closeResources(){
+  document.body.style.overflow='auto';
+  const p=document.getElementById("resPage");
+  p.classList.remove("active");
+  setTimeout(()=>p.style.display="none",400);
 }
 
-function closeResources(){
-  document.getElementById("resPage").style.display = "none";
+// CLICK SOUND
+function playClick(){
+  const audio=new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
+  audio.play();
 }
+
+// WELCOME LOADER
+window.onload=()=>{ alert('Welcome to INTERNAL X CHEAT'); };
 </script>
 
 </body>
