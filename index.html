@@ -315,6 +315,55 @@ function playClick(){
 
 // WELCOME LOADER
 window.onload=()=>{ alert('Welcome to INTERNAL X CHEAT'); };
+
+// ================== 🔐 SMART PROTECTION ==================
+let devUnlocked = false;
+
+// 🔑 SECRET KEY → CTRL + SHIFT + Z
+document.addEventListener("keydown", function(e){
+  if(e.ctrlKey && e.shiftKey && e.key === "Z"){
+    devUnlocked = true;
+    alert("✅ Developer Mode ON");
+  }
+});
+
+// ❌ BASIC BLOCK
+["contextmenu","copy","cut","selectstart","dragstart"].forEach(ev=>{
+  document.addEventListener(ev, e=>{
+    if(!devUnlocked) e.preventDefault();
+  });
+});
+
+// ❌ KEY BLOCK
+document.addEventListener("keydown", function(e){
+  if(devUnlocked) return;
+
+  if (
+    (e.ctrlKey && (e.key === "s" || e.key === "u")) ||
+    (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+    e.key === "F12"
+  ){
+    e.preventDefault();
+  }
+});
+
+// 🚫 DEVTOOLS DETECT + BLUR
+setInterval(()=>{
+  if(devUnlocked) return;
+
+  if (window.outerWidth - window.innerWidth > 160) {
+    document.body.style.filter = "blur(12px)";
+  } else {
+    document.body.style.filter = "none";
+  }
+},500);
+
+// 🚫 iframe protection
+if (window !== window.top) {
+  window.top.location = window.location;
+}
+
+
 </script>
 
 </body>
