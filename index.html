@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 Internal X Cheat PRO</title>
+<title>🔥INTERNAL X CHEATS🔥</title>
 
 <style>
 /* RESET & BODY */
@@ -13,18 +13,20 @@ body{
   color:#fff;
   overflow-y:auto;
   position:relative;
-  background:#000;
+  background:#050816;
+  min-height:100vh;
 }
 
-/* PARTICLES CANVAS */
-#particles-js {
+/* SNOW CANVAS */
+#snow-canvas {
   position:fixed;
   top:0;left:0;
   width:100%;height:100%;
   z-index:-1;
+  pointer-events:none;
 }
 
-/* SCROLLBAR (red style) */
+/* SCROLLBAR */
 ::-webkit-scrollbar{width:10px;}
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(red,darkred);
@@ -44,56 +46,66 @@ header{
 }
 .brand{
   font-size:32px;
-  color:red;
-  text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red;
+  color:white;
+  text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6;
   animation: flicker 1.5s infinite alternate;
+}
+.brand span{
+  color:#3b82f6;
 }
 .title{
   font-size:16px;
-  color:white; /* changed from #aaa to white */
-  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px #aaa, 0 0 30px white; /* white glow */
+  color:white;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px #aaa, 0 0 30px white;
   animation: flicker 1.5s infinite alternate;
 }
 
 /* FLICKER KEYFRAMES */
 @keyframes flicker {
-  0%   { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
-  10%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.8; }
-  20%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
-  30%  { text-shadow: 0 0 3px red, 0 0 6px red, 0 0 12px darkred, 0 0 18px red; opacity:0.9; }
-  40%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
-  50%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.7; }
-  60%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
-  70%  { text-shadow: 0 0 3px red, 0 0 6px red, 0 0 12px darkred, 0 0 18px red; opacity:0.85; }
-  80%  { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
-  90%  { text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px darkred, 0 0 15px red; opacity:0.8; }
-  100% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred, 0 0 30px red; opacity:1; }
+  0%   { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
+  10%  { text-shadow: 0 0 2px #3b82f6, 0 0 5px #3b82f6, 0 0 10px #2563eb, 0 0 15px #3b82f6; opacity:0.8; }
+  20%  { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
+  30%  { text-shadow: 0 0 3px #3b82f6, 0 0 6px #3b82f6, 0 0 12px #2563eb, 0 0 18px #3b82f6; opacity:0.9; }
+  40%  { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
+  50%  { text-shadow: 0 0 2px #3b82f6, 0 0 5px #3b82f6, 0 0 10px #2563eb, 0 0 15px #3b82f6; opacity:0.7; }
+  60%  { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
+  70%  { text-shadow: 0 0 3px #3b82f6, 0 0 6px #3b82f6, 0 0 12px #2563eb, 0 0 18px #3b82f6; opacity:0.85; }
+  80%  { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
+  90%  { text-shadow: 0 0 2px #3b82f6, 0 0 5px #3b82f6, 0 0 10px #2563eb, 0 0 15px #3b82f6; opacity:0.8; }
+  100% { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #3b82f6; opacity:1; }
 }
 
 /* HERO */
 .hero{
-  height:350px;
+  min-height:200px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:40px;
+  padding:30px 40px;
   text-align:center;
   z-index:2;
   position:relative;
 }
-.hero h1{ font-size:42px;margin-bottom:20px;}
-.hero-btns{display:flex;gap:15px;flex-wrap:wrap;}
+.hero h1{ font-size:38px;margin-bottom:15px;color:white;}
+.hero-btns{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;}
 .btn{
   position:relative;
-  background:linear-gradient(45deg, red, darkred);
+  background:linear-gradient(45deg, #2563eb, #3b82f6);
   padding:12px 25px;
   border-radius:30px;
   cursor:pointer;
-  box-shadow:0 0 25px rgba(255,0,0,0.5);
+  box-shadow:0 0 25px rgba(59,130,246,0.5);
   overflow:hidden;
   transition:0.3s;
   z-index:2;
+  border:none;
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
 }
 .btn::after{
   content:'';
@@ -105,6 +117,10 @@ header{
 }
 .btn:hover::after{width:100%;}
 .btn:hover{transform:scale(1.05);}
+.btn.discord-btn{background:#5865F2;box-shadow:0 0 25px rgba(88,101,242,0.5);}
+.btn.youtube-btn{background:#ff0000;box-shadow:0 0 25px rgba(255,0,0,0.5);}
+.btn.done{opacity:0.7;cursor:default;transform:none !important;}
+.btn.done:hover{transform:none !important;}
 
 /* VIDEO GRID */
 .video-grid{
@@ -121,8 +137,8 @@ header{
   overflow:hidden;
   cursor:pointer;
   backdrop-filter: blur(8px);
-  border:1px solid rgba(255,0,0,0.2);
-  box-shadow:0 0 15px rgba(255,0,0,0.3);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 15px rgba(59,130,246,0.2);
   opacity:0;
   transform:translateY(40px);
   transition:0.6s;
@@ -132,7 +148,7 @@ header{
 .video-item:hover img{transform:scale(1.08) translateY(-5px);}
 .video-item::after{
   content:"▶";
-  position:absolute;font-size:45px;color:red;
+  position:absolute;font-size:45px;color:#3b82f6;
   top:50%;left:50%;
   transform:translate(-50%,-50%) scale(0);
   transition:0.3s;
@@ -147,7 +163,7 @@ header{
 /* RESOURCES PAGE */
 .resources-page{
   position:fixed;inset:0;
-  background:#000;
+  background:#050816;
   display:none;
   flex-direction:column;
   z-index:999;
@@ -158,13 +174,20 @@ header{
 .resources-page.active{opacity:1;}
 .res-header{
   padding:15px;
-  background:#111;
+  background:rgba(255,255,255,0.05);
   display:flex;
   justify-content:space-between;
   align-items:center;
+  border-bottom:1px solid rgba(255,255,255,0.1);
 }
 .cancel-btn{
-  background:red;padding:8px 15px;border-radius:20px;cursor:pointer;
+  background:linear-gradient(45deg, #2563eb, #3b82f6);
+  padding:8px 15px;
+  border-radius:20px;
+  cursor:pointer;
+  border:none;
+  color:white;
+  font-weight:600;
 }
 .res-list{
   padding:20px;
@@ -173,11 +196,12 @@ header{
   gap:15px;
 }
 .res-row{
-  display:flex;align-items:center;gap:15px;background:#111;padding:10px;border-radius:10px;
+  display:flex;align-items:center;gap:15px;background:rgba(255,255,255,0.05);padding:10px;border-radius:10px;
   flex-wrap:wrap;
+  border:1px solid rgba(255,255,255,0.05);
 }
 .res-row img{width:180px;border-radius:8px;}
-.res-btn{margin-left:auto;background:red;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;}
+.res-btn{margin-left:auto;background:linear-gradient(45deg, #2563eb, #3b82f6);border:none;padding:10px 20px;border-radius:6px;cursor:pointer;color:white;font-weight:600;}
 .res-btn:hover{opacity:0.8;}
 
 /* RESPONSIVE */
@@ -186,24 +210,87 @@ header{
   .res-row{flex-direction:column;align-items:flex-start;}
   .res-btn{margin-left:0;width:100%;}
 }
+
+/* LOGIN CARD OVERLAY - MODIFIED (only YouTube required) */
+.login-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+.login-overlay.active{display:flex;}
+.login-card{
+  width:430px;
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,.4);
+}
+.login-card .logo{
+  color:white;
+  font-size:38px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+.login-card .logo span{color:#3b82f6;}
+.login-card .desc{
+  color:#cbd5e1;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+.login-card .btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-decoration:none;
+  color:white;
+  padding:15px;
+  border-radius:14px;
+  margin-top:12px;
+  font-weight:600;
+  transition:.3s;
+  cursor:pointer;
+  border:none;
+  width:100%;
+}
+.login-card .btn:hover{transform:translateY(-3px);}
+.login-card .youtube{background:#ff0000;}
+.login-card .btn.done{background:#2d7a3a;opacity:0.7;cursor:default;}
+.login-card .btn.done:hover{transform:none;}
+.login-card .progress-box{display:none;margin-top:20px;}
+.login-card .progress{width:100%;height:14px;background:#1f2937;border-radius:20px;overflow:hidden;}
+.login-card .fill{width:0%;height:100%;background:linear-gradient(90deg,#2563eb,#dc2626);}
+.login-card .percent{color:white;margin-top:10px;font-weight:600;}
+.login-card .status{color:#94a3b8;margin-top:6px;font-size:14px;}
+.login-card .success{color:#22c55e;margin-top:10px;display:none;}
+.login-card .checkmark{margin-left:8px;font-size:16px;}
+.login-card .completed-text{color:#22c55e;font-size:14px;margin-top:12px;display:none;font-weight:600;}
 </style>
 </head>
 <body>
 
-<!-- PARTICLES BACKGROUND -->
-<div id="particles-js"></div>
+<!-- SNOW CANVAS -->
+<canvas id="snow-canvas"></canvas>
 
 <header>
-  <span class="brand">INTERNAL X CHEAT</span><br>
+  <span class="brand">INTERNAL <span>X</span> CHEATS</span><br>
   <span class="title">PANEL SERIES PRO MAX</span><br>
 </header>
 
 <div class="hero">
-  <h1>🔥 PANEL MAKING SERIES</h1>
+  <h1>🔥 PANEL MAKING SERIES 🔥</h1>
   <div class="hero-btns">
-    <div class="btn" onclick="playClick();openChannel()">▶ Visit Channel</div>
-    <div class="btn" onclick="playClick();openDiscord()">💬 Join Discord</div>
-    <div class="btn" onclick="playClick();openResources()">📁 Video Resources</div>
+    <button class="btn discord-btn" onclick="playClick();openDiscord()">💬 Join Discord</button>
+    <button class="btn youtube-btn" onclick="playClick();openYoutube()">▶ Subscribe YouTube</button>
+    <button class="btn" onclick="playClick();openResources()">📁 Video Resources</button>
   </div>
 </div>
 
@@ -212,33 +299,99 @@ header{
 <div class="resources-page" id="resPage">
   <div class="res-header">
     <h3>📁 Video Resources</h3>
-    <div class="cancel-btn" onclick="playClick();closeResources()">✖ Close</div>
+    <button class="cancel-btn" onclick="playClick();closeResources()">✖ Close</button>
   </div>
   <div class="res-list" id="resList"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-// PARTICLES CONFIG
-particlesJS('particles-js', {
-  particles:{
-    number:{value:80,density:{enable:true,value_area:800}},
-    color:{value:'#ff0000'},
-    shape:{type:'circle'},
-    opacity:{value:0.5,random:true},
-    size:{value:3,random:true},
-    line_linked:{enable:true,distance:150,color:'#ff0000',opacity:0.4,width:1},
-    move:{enable:true,speed:2,direction:'none',random:false,straight:false,out_mode:'out',bounce:false}
-  },
-  interactivity:{
-    detect_on:'canvas',
-    events:{onhover:{enable:true,mode:'repulse'},onclick:{enable:true,mode:'push'},resize:true},
-    modes:{repulse:{distance:100},push:{particles_nb:4}}
-  },
-  retina_detect:true
-});
+<!-- LOGIN OVERLAY - Only YouTube required -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-card">
+    <div class="logo">Internal <span>X</span> Cheats</div>
+    <div class="desc">🔥 Welcome To Internal X Community<br><br>Please subscribe to our YouTube channel before continuing.</div>
 
-// RESOURCES DATA (21 VIDEOS)
+    <button class="btn youtube" id="youtubeBtn" onclick="handleYoutubeClick(event)">
+      <i class="fab fa-youtube"></i> Subscribe YouTube Channel
+      <span class="checkmark" id="youtubeCheck" style="display:none;">✓</span>
+    </button>
+
+    <div class="completed-text" id="completedText">✅ Step completed! Redirecting...</div>
+
+    <div class="progress-box" id="progressBox">
+      <div class="progress"><div class="fill" id="fill"></div></div>
+      <div class="percent" id="percent">0%</div>
+      <div class="status" id="status">Preparing...</div>
+      <div class="success" id="success">✓ Redirecting...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ================== SNOW EFFECT ==================
+(function() {
+    const canvas = document.getElementById('snow-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let snowflakes = [];
+    const MAX_SNOWFLAKES = 150;
+
+    function resizeCanvas() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    function createSnowflake() {
+        return {
+            x: Math.random() * width,
+            y: Math.random() * height - height,
+            radius: Math.random() * 3 + 1.5,
+            speed: Math.random() * 1.5 + 0.5,
+            wind: Math.random() * 1.2 - 0.6,
+            opacity: Math.random() * 0.6 + 0.4
+        };
+    }
+
+    function initSnow() {
+        snowflakes = [];
+        for (let i = 0; i < MAX_SNOWFLAKES; i++) {
+            snowflakes.push(createSnowflake());
+        }
+    }
+
+    function drawSnow() {
+        ctx.clearRect(0, 0, width, height);
+        
+        snowflakes.forEach(sf => {
+            ctx.beginPath();
+            ctx.arc(sf.x, sf.y, sf.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${sf.opacity})`;
+            ctx.fill();
+            
+            sf.y += sf.speed;
+            sf.x += Math.sin(sf.y * 0.005) * 0.3 + sf.wind * 0.2;
+            
+            if (sf.y > height + 20) {
+                const idx = snowflakes.indexOf(sf);
+                snowflakes[idx] = createSnowflake();
+                snowflakes[idx].y = -20;
+            }
+            
+            if (sf.x > width + 20) sf.x = -20;
+            if (sf.x < -20) sf.x = width + 20;
+        });
+        
+        requestAnimationFrame(drawSnow);
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    initSnow();
+    drawSnow();
+})();
+
+// ================== REST OF THE CODE ==================
+
+// RESOURCES DATA
 const resources=[
 {id:"RA1jhnu4fks",url:"https://www.mediafire.com/file/exqwmekcyl9kzuz/Module+PART+2.rar/file"},
 {id:"sJwiOQO9ueg",url:"https://shrinkme.click/CHAMS-MENU"},
@@ -292,14 +445,14 @@ const resList=document.getElementById("resList");
 resources.forEach(item=>{
   const row=document.createElement("div");
   row.className="res-row";
-  row.innerHTML=`<img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg"><button class="res-btn" onclick="window.open('${item.url}','_blank')">▶ Resources</button>`;
+  row.innerHTML=`<img src="https://img.youtube.com/vi/${item.id}/hqdefault.jpg"><span style="color:white;flex:1;">Video ${resources.indexOf(item)+1}</span><button class="res-btn" onclick="window.open('${item.url}','_blank')">▶ Resources</button>`;
   resList.appendChild(row);
 });
 
 // FUNCTIONS
 function openYT(id){window.open("https://youtu.be/"+id,"_blank");}
-function openChannel(){window.open("https://www.youtube.com/@internalxcheat","_blank");}
 function openDiscord(){window.open("https://discord.gg/UqKDqsBpBp","_blank");}
+function openYoutube(){window.open("https://www.youtube.com/@internalxcheat?sub_confirmation=1","_blank");}
 function openResources(){
   document.body.style.overflow='hidden';
   const p=document.getElementById("resPage");
@@ -319,13 +472,67 @@ function playClick(){
   audio.play();
 }
 
-// WELCOME LOADER
-window.onload=()=>{ alert('Welcome to INTERNAL X CHEAT'); };
+// SHOW LOGIN OVERLAY ON LOAD
+window.onload=()=>{
+  document.getElementById("loginOverlay").classList.add("active");
+  document.querySelectorAll(".video-item").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-50){el.classList.add("show");}
+  });
+};
 
-// ================== 🔐 SMART PROTECTION ==================
+// ================== LOGIN CARD LOGIC (Only YouTube) ==================
+let youtubeClicked = false;
+let progressStarted = false;
+
+function handleYoutubeClick(event){
+    youtubeClicked = true;
+    document.getElementById("youtubeCheck").style.display = "inline";
+    event.target.classList.add("done");
+    window.open("https://www.youtube.com/@internalxcheat?sub_confirmation=1","_blank");
+    checkCompleted();
+}
+
+function checkCompleted(){
+    if(youtubeClicked && !progressStarted){
+        progressStarted = true;
+        document.getElementById("completedText").style.display = "block";
+        setTimeout(() => {
+            startProgress();
+        }, 800);
+    }
+}
+
+function startProgress(){
+    document.getElementById("progressBox").style.display = "block";
+    let progress = 0;
+    const fill = document.getElementById("fill");
+    const percent = document.getElementById("percent");
+    const status = document.getElementById("status");
+
+    const timer = setInterval(() => {
+        progress++;
+        fill.style.width = progress + "%";
+        percent.innerHTML = progress + "%";
+
+        if(progress < 30) status.innerHTML = "Loading...";
+        else if(progress < 60) status.innerHTML = "Preparing Website...";
+        else if(progress < 90) status.innerHTML = "Almost Ready...";
+        else status.innerHTML = "Redirecting...";
+
+        if(progress >= 100){
+            clearInterval(timer);
+            document.getElementById("success").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("loginOverlay").classList.remove("active");
+                document.body.style.overflow = 'auto';
+            }, 1000);
+        }
+    }, 40);
+}
+
+// ================== 🔐 PROTECTION ==================
 let devUnlocked = false;
 
-// 🔑 SECRET KEY → CTRL + SHIFT + Z
 document.addEventListener("keydown", function(e){
   if(e.ctrlKey && e.shiftKey && e.key === "Z"){
     devUnlocked = true;
@@ -333,17 +540,14 @@ document.addEventListener("keydown", function(e){
   }
 });
 
-// ❌ BASIC BLOCK
 ["contextmenu","copy","cut","selectstart","dragstart"].forEach(ev=>{
   document.addEventListener(ev, e=>{
     if(!devUnlocked) e.preventDefault();
   });
 });
 
-// ❌ KEY BLOCK
 document.addEventListener("keydown", function(e){
   if(devUnlocked) return;
-
   if (
     (e.ctrlKey && (e.key === "s" || e.key === "u")) ||
     (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
@@ -353,10 +557,8 @@ document.addEventListener("keydown", function(e){
   }
 });
 
-// 🚫 DEVTOOLS DETECT + BLUR
 setInterval(()=>{
   if(devUnlocked) return;
-
   if (window.outerWidth - window.innerWidth > 160) {
     document.body.style.filter = "blur(12px)";
   } else {
@@ -364,12 +566,9 @@ setInterval(()=>{
   }
 },500);
 
-// 🚫 iframe protection
 if (window !== window.top) {
   window.top.location = window.location;
 }
-
-
 </script>
 
 </body>
